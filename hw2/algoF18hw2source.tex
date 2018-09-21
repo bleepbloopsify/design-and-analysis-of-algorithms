@@ -1,0 +1,101 @@
+\documentclass[12pt]{article} 
+
+\usepackage[top=2.54cm, bottom=2.54cm, left=2.54cm, right=2.54cm]{geometry}
+\usepackage{enumerate}
+\pagestyle{plain}
+
+\begin{document}  
+\pagestyle{empty}
+ 
+
+\begin{center} ALGORITHMS,   FALL 2018, HOMEWORK 2
+\end{center}
+\noindent Due Thursday, September 20 at 11:59pm.  \\
+Worth 2\% of the final grade.\\
+Submit each problem on a separate page. Subproblems can be on the same page.
+
+\begin{enumerate}
+
+\item
+$S(n) = 2S(\frac{n}{2})  + \Theta(1)$.  
+
+(a) Evaluate $S(n)$ with a recursion tree. 
+
+(b) Use substitution (induction) to get a lower bound that matches the result in (a).    
+
+(c)  {\em Not required or graded:    confirm the  matching upper bound via substitution.}\\
+
+
+
+
+ \item (a) Use  substitution (induction)  to prove: $T(n) = 18T(\frac{n}{3}) + \Theta(n^2)  = O(n^3)$.   
+ 
+(b) Show that this isn't the best possible upper bound for $T(n)$. 
+
+ (c) {\em  Not required or graded: confirm (b) by getting a better bound via substitution.}\\
+
+
+
+\item Use the master method for the following, or explain why it's not possible.  If you get Case 3 you  do not need to confirm that there is a geometric series.
+\begin{enumerate}
+
+\itemsep-0.35cm
+
+\item  $T(n)= 10\cdot T(\frac{n}{3}) + \Theta(n^2\log^5 n)$.\\
+
+\item $T(n) = T(\frac{19n}{72}) + \Theta(n^2)$.\\
+
+\item $T(n) = n\cdot T(\frac{n}{5}) + n^{\log_5 n}$.\\
+
+\item  $T(n) =  3\cdot T(\frac{n}{2}) + n^2$.\\
+  
+\item $T(n) =   T(\frac{n}{n{-}1}) + 1$.\\
+ 
+\item  $T(n) =  4\cdot T(\frac{n}{16}) + \sqrt{n}\cdot\log^4n$. \\
+
+ \end{enumerate}
+
+
+
+ 
+ 
+\item  Solve $T(n) = T(\sqrt{n}) + \log n$\\
+(a) with a recursion tree       \\
+(b) by substitution (induction)\\
+(c) with the master method, after applying a change of variables, $n=2^m$. 
+
+{\em To warm up for (c), consider the following question which you do not need to answer.
+}\\
+Think of an abstract recursive algorithm that operates on a  $n\times n$ matrix:  It does non-recursive work proportional to the number of elements in the matrix (say just $n^2$ work), and then recurses on each of the four quadrants. \\
+This could be expressed as $T(n) = 4T(\frac{n}{2}) + n^2$, by describing the matrix side length as the parameter,
+or as $S(n^2) = 4S(\frac{n^2}{4}) + n^2$, by describing the total number of elements as the parameter.  Here we could set $m=n^2$ to have $S(m) = 4S(\frac{m}{4}) + m$.\\
+What's the solution in each case?  It should be the same because we are describing the same thing.  The general lesson here is that you can be creative when describing the problem size, in order to get a recurrence that's easy to deal with.\\
+
+
+\end{enumerate}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
