@@ -1,0 +1,51 @@
+\documentclass[12pt]{article} 
+
+\usepackage[top=2.54cm, bottom=2.54cm, left=2.54cm, right=2.54cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx,color}
+
+
+\pagestyle{plain}
+\begin{document}  
+
+%   \pagestyle{empty}      %%% uncomment this to remove page numbers
+
+\begin{enumerate}
+  \item 
+    \begin{enumerate}
+      \item 
+      $U(n)$ is an unbalanced sort.
+      $B(N)$ is a balanced sort.
+
+      Worst case scenario for a balanced sort would be $B(n) = U(\frac{n}{c}) + U(n - \frac{n}{c}) + dn$.
+      Worst case scenario for an unbalanced sort is $U(n) = B(n - u) + udn$.
+
+      If we subsitute, we are left with the expression
+
+      $B(n) = B(\frac{n}{c} - u) + ud\frac{n}{c} + B(\frac{cn - n}{c} - u) + ud\frac{cn - n}{c} + dn$
+
+      we can bring together all of the constant terms to
+
+      $B(n) = B(\frac{n}{c} - u) + B(\frac{cn - n}{c} - u) + (\frac{n}{c} + \frac{cn - n}{c} + 1)ud$
+
+      Consolidating the constants gets us 
+
+      $B(n) = B(\frac{n}{c} - u) + B(\frac{cn - n}{c} - u) + dun + du$
+
+      $B(n) \leq 2B(\frac{n}{c}) + dun + du$
+
+      The runtime of this is $O(n\log n)$
+
+
+      % The probability of the pivot being balanced is $\frac{n - 2c}{n}$.
+      % Therefore, the probabilty of it being balanced is $\frac{2c}{n}$.
+
+      \item
+      
+      If $du = n$ at any point of this Quicksort, quicksort is actually root dominated, and the runtime becomes $O(n^2)$.
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
