@@ -1,0 +1,55 @@
+\documentclass[12pt]{article} 
+
+\usepackage[top=2.54cm, bottom=2.54cm, left=2.54cm, right=2.54cm]{geometry}
+\usepackage{enumerate,color}
+\pagestyle{plain}
+
+\begin{document}  
+\pagestyle{empty}
+ 
+
+\begin{center} ALGORITHMS,   FALL 2018, HOMEWORK 8
+\end{center}
+\noindent Due Thursday, November 1 at 11:59pm.\\ 
+\noindent Worth 1\% of the final grade.\\
+\noindent {\bf Recall that looking up algorithms online is not allowed.}
+
+\begin{enumerate}
+
+ \item Design any polynomial-time algorithm to get a LCS (not just the length of the LCS) of two strings of length $n$, using $O(n)$ space.\\\\\\\\\\\\
+ 
+  In polynomial time is fairly straightforward, as we can simply scan over each character of the first string, 
+  and attempt to run a parallel scan on each character of the second string. This is polynomial time because it will have to run 1 scan per
+  character in the second string (n scans), as well as 1 scan per character in the first (so n scans n times is $n^2$).
+
+  This is $O(n)$ space because we only store the longest string and the string we're currently looking at. This is worst case $2n - 1$ which is still $O(n)$.
+
+
+\end{enumerate}
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
